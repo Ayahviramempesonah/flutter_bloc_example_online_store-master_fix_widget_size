@@ -82,6 +82,8 @@ class _ProductDetailState extends State<ProductDetail> {
                 height: MediaQuery.of(context).size.height * 0.45,
                 decoration: BoxDecoration(
                     image: DecorationImage(
+                        opacity: 1.0,
+filterQuality: FilterQuality.high,
                         image: NetworkImage(widget.product.images[0]),
                         fit: BoxFit.contain)),
               ),
@@ -89,7 +91,8 @@ class _ProductDetailState extends State<ProductDetail> {
           ),
           Container(
             color: Colors.grey[200],
-            padding: const EdgeInsets.only(left: 20, top: 20),
+          padding: const EdgeInsets.only(left: 20, top: 20),
+          // padding: EdgeInsets.all(16),
             child: Row(
               children: [
                 Text(
@@ -111,6 +114,7 @@ class _ProductDetailState extends State<ProductDetail> {
           ),
           Expanded(
             child: Container(
+              
               color: Colors.grey[200],
               padding: const EdgeInsets.all(20),
               child: Text(
@@ -127,12 +131,12 @@ class _ProductDetailState extends State<ProductDetail> {
           ),
           Container(
             height: 100,
-            padding: const EdgeInsets.symmetric(horizontal: 20),
-            alignment: Alignment.bottomCenter,
+            padding: const EdgeInsets.symmetric(horizontal: 8.0),
+           // alignment: Alignment.bottomCenter,
             color: Colors.grey,
             child: Expanded(
               child: Row(
-                mainAxisAlignment: MainAxisAlignment.spaceAround,
+                //mainAxisAlignment: MainAxisAlignment.spaceAround,
                 children: [
                   Center(
                     child: Row(
